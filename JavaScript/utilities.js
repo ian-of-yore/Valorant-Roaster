@@ -41,6 +41,10 @@ function addPlayerToListContainer(playerNameId, listContainerId) {
 // disable the player button after pressing once
 function disableSelectButton(buttonId) {
     const buttonSelectPlayer = document.getElementById(buttonId);
-    return buttonSelectPlayer.disabled = true;
+    buttonSelectPlayer.disabled = true;
+    buttonSelectPlayer.classList.remove("bg-blue-600");
+    buttonSelectPlayer.classList.remove("hover:bg-blue-700");
+    buttonSelectPlayer.classList.add("cursor-not-allowed");
+    buttonSelectPlayer.classList.add("bg-gray-500");
 }
 
