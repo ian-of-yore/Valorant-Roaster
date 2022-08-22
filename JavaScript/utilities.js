@@ -1,9 +1,3 @@
-// convert the innerText to an integer value
-function setInnertextToInteger(input) {
-    const objectValue = document.getElementById(input);
-    const objectValueString = objectValue.innerText;
-    return objectValueInt = parseInt(objectValueString);
-}
 
 // set a value as innerText of an element
 function setInnertextAsValue(elementId, elementValue) {
@@ -16,12 +10,6 @@ function collectInputValueAsInteger(objectId) {
     const objectValue = document.getElementById(objectId);
     const objectValueString = objectValue.value;
     return objectValueInt = parseInt(objectValueString);
-}
-
-// set inputValue to an element
-function setInputValueToElement(objectId, objectValue) {
-    const element = document.getElementById(objectId);
-    return element.value = objectValue;
 }
 
 // collect innerText from element
