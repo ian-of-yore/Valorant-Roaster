@@ -30,13 +30,23 @@ function collectInnerText(objectId) {
     return objectValue.innerText;
 }
 
+// count the number of items inside the list
+function listContainerLength() {
+    const listItems = document.getElementById("list-container").getElementsByTagName("li");
+    return listItems.length;
+}
+
 // update player to the list-container
 function addPlayerToListContainer(playerNameId, listContainerId) {
-    const playerName = collectInnerText(playerNameId);
-    const listContainer = document.getElementById(listContainerId);
-    const newLi = document.createElement("li");
-    newLi.innerText = playerName;
-    return listContainer.appendChild(newLi);
+    const addedPlayerNumber = listContainerLength();
+    if (addedPlayerNumber >= 5) return;
+    else {
+        const playerName = collectInnerText(playerNameId);
+        const listContainer = document.getElementById(listContainerId);
+        const newLi = document.createElement("li");
+        newLi.innerText = playerName;
+        return listContainer.appendChild(newLi);
+    }
 }
 
 // disable the player button after pressing once
@@ -44,3 +54,4 @@ function disableSelectButton(buttonId) {
     const buttonSelectPlayer = document.getElementById(buttonId);
     return buttonSelectPlayer.disabled = true;
 }
+
