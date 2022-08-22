@@ -29,3 +29,18 @@ function collectInnerText(objectId) {
     const objectValue = document.getElementById(objectId);
     return objectValue.innerText;
 }
+
+// update player to the list-container
+function addPlayerToListContainer(playerNameId, listContainerId) {
+    const playerName = collectInnerText(playerNameId);
+    const listContainer = document.getElementById(listContainerId);
+    const newLi = document.createElement("li");
+    newLi.innerText = playerName;
+    return listContainer.appendChild(newLi);
+}
+
+// disable the player button after pressing once
+function disableSelectButton(buttonId) {
+    const buttonSelectPlayer = document.getElementById(buttonId);
+    return buttonSelectPlayer.disabled = true;
+}
