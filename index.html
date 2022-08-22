@@ -275,18 +275,18 @@
                             <div class="w-2/4">
                                 <p class="text-xl">Per Player</p>
                             </div>
-                            <div><input type="text" name="" id=""></div>
+                            <div><input id="cost-per-player" class="text-black" type="text" name="" id=""></div>
                         </div>
-                        <div class="flex justify-center mb-10">
-                            <button type="button"
+                        <div class="flex justify-center mb-5">
+                            <button id="calculate-players-budget" type="button"
                                 class="w-4/5 mx-auto inline-block px-8 py-2.5 bg-blue-600 text-white font-medium text-lg leading-tight hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
                                 Calculate</button>
                         </div>
-                        <div class="flex mx-10 mb-5">
+                        <div class="flex mx-10 mb-20">
                             <div class="w-3/4">
                                 <p class="text-xl">Player Expenses</p>
                             </div>
-                            <div class="w-1/4 text-xl">$5000</div>
+                            <div class="w-1/4 text-xl text-yellow-600">$<span id="player-expenses">5000</span></div>
                         </div>
                         <div class="flex mx-10 mb-5">
                             <div class="w-2/4">
@@ -294,14 +294,14 @@
                             </div>
                             <div><input type="text" name="" id=""></div>
                         </div>
-                        <div class="flex mx-10 mb-10">
+                        <div class="flex mx-10 mb-5">
                             <div class="w-2/4">
                                 <p class="text-xl">Coach</p>
                             </div>
                             <div><input type="text" name="" id=""></div>
                         </div>
-                        <div class="flex justify-center mb-10">
-                            <button type="button"
+                        <div class="flex justify-center mb-5">
+                            <button id="calculate-total-budget" type="button"
                                 class="w-4/5 mx-auto inline-block px-8 py-2.5 bg-blue-600 text-white font-medium text-lg leading-tight hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
                                 Calculate Total</button>
                         </div>
@@ -309,7 +309,7 @@
                             <div class="w-3/4">
                                 <p class="text-xl">Total</p>
                             </div>
-                            <div class="w-1/4 text-xl text-orange-600">$11000</div>
+                            <div class="w-1/4 text-xl text-orange-600">$<span id="total-expenses">11000</span></div>
                         </div>
 
 
@@ -322,6 +322,7 @@
 
     <script src="JavaScript/utilities.js"></script>
     <script src="JavaScript/update-cart.js"></script>
+    <script src="JavaScript/budget-calculation.js"></script>
 </body>
 <footer class="mt-48">
     <hr>
